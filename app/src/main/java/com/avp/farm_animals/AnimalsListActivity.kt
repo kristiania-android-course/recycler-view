@@ -5,6 +5,8 @@ import android.os.Bundle
 
 class AnimalsListActivity : AppCompatActivity() {
 
+    /*flistAnimals*/
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_animals_list)
