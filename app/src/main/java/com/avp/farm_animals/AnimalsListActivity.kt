@@ -3,17 +3,10 @@ package com.avp.farm_animals
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class MainActivity : AppCompatActivity() {
+class AnimalsListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        /*fimClick*/
+        setContentView(R.layout.activity_animals_list)
     }
-
-    /*fopAnim*/
-
-
-    /*fwhenOnClick*/
 }
