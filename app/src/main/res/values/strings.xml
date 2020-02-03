@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">farm-animals</string>
     <string name="title_farm">Old MacAndroid had a farm</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
