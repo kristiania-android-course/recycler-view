@@ -9,10 +9,14 @@ import kotlinx.android.synthetic.main.activity_animal.*
 class AnimalActivity : AppCompatActivity() {
 
 
+    var mPlayer: MediaPlayer? = null
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_animal)
         val name = intent.getStringExtra("image_to_show")
+        // Get drawables for each item name.
         val drawableRes = when (name) {
             "Chicken" -> R.drawable.chicken
             "Cow" -> R.drawable.cow
@@ -20,11 +24,13 @@ class AnimalActivity : AppCompatActivity() {
             "Sheep" -> R.drawable.sheep
             else -> 0
         }
+        // Set image resources
         image_bigger.setImageResource(drawableRes)
         txt_animal_name.text = name
 
         /*fimgBigClick*/
         image_bigger.setOnClickListener {
+            // Get mp3 files for each item name.
             val rawMP3File = when (name) {
                 "Chicken" -> R.raw.chicken
                 "Cow" -> R.raw.chicken
@@ -38,9 +44,14 @@ class AnimalActivity : AppCompatActivity() {
     }
 
     private fun playAudio(rawMP3File: Int) {
-        var mPlayer: MediaPlayer? = null
         mPlayer = MediaPlayer.create(this, rawMP3File)
         mPlayer?.start()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mPlayer?.stop()
+        mPlayer?.release()
     }
 
 
