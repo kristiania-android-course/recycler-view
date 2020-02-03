@@ -8,6 +8,11 @@
 
     <TextView
         android:id="@+id/txt_title"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:background="@color/red"
+        android:gravity="bottom"
+        android:textStyle="bold"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:paddingBottom="20dp"
@@ -25,6 +30,62 @@
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
         android:layout_height="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:background="@drawable/square_red_box"
+                android:scaleType="fitXY"
+                android:layout_margin="16dp"
+                android:id="@+id/img_chicken"
+                android:layout_weight="1"
+                android:src="@drawable/chicken"
+                android:padding="1.5dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"/>
+
+            <ImageView
+                android:background="@drawable/square_red_box"
+                android:scaleType="fitXY"
+                android:layout_margin="16dp"
+                android:id="@+id/img_cow"
+                android:layout_weight="1"
+                android:src="@drawable/cow"
+                android:padding="1.5dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:background="@drawable/square_red_box"
+                android:scaleType="fitXY"
+                android:layout_margin="16dp"
+                android:id="@+id/img_sheep"
+                android:layout_weight="1"
+                android:src="@drawable/sheep"
+                android:padding="1.5dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"/>
+
+            <ImageView
+                android:background="@drawable/square_red_box"
+                android:scaleType="fitXY"
+                android:layout_margin="16dp"
+                android:id="@+id/img_goat"
+                android:layout_weight="1"
+                android:src="@drawable/goat"
+                android:padding="1.5dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"/>
+        </LinearLayout>
 
         <!--fimg-->
 
